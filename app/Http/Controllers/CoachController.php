@@ -13,7 +13,7 @@ class CoachController extends Controller
      */
     public function index()
     {
-        //
+        return Coach::paginate(25);
     }
 
     /**
@@ -37,7 +37,7 @@ class CoachController extends Controller
      */
     public function show(Coach $coach)
     {
-        //
+        return $coach->load(['coachDetails', 'teacherInteractions']);
     }
 
     /**

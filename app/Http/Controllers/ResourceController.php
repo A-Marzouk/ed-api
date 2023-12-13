@@ -13,7 +13,7 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        //
+        return Resource::paginate(25);
     }
 
     /**
@@ -37,7 +37,7 @@ class ResourceController extends Controller
      */
     public function show(Resource $resource)
     {
-        //
+        return $resource->load('resourceManagement');
     }
 
     /**

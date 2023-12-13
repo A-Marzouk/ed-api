@@ -18,7 +18,7 @@ class ResourceSeeder extends Seeder
                 'name' => 'Interactive Geometry Software',
                 'type' => 'software',
                 'resource_management' => [
-                    'allocated_teachers' => [Teacher::factory(), Teacher::factory()],
+                    'allocated_teachers' => [Teacher::factory()->create()->id, Teacher::factory()->create()->id],
                     'utilization_rate' => 87,
                 ]
             ],
@@ -26,7 +26,7 @@ class ResourceSeeder extends Seeder
                 'name' => 'Online Chemistry Lab',
                 'type' => 'lab',
                 'resource_management' => [
-                    'allocated_teachers' => [Teacher::factory()],
+                    'allocated_teachers' => [Teacher::factory()->create()->id],
                     'utilization_rate' => 75,
                 ]
             ],
@@ -34,7 +34,7 @@ class ResourceSeeder extends Seeder
                 'name' => 'Historical Documentaries Archive',
                 'type' => 'Archive',
                 'resource_management' => [
-                    'allocated_teachers' => [Teacher::factory()],
+                    'allocated_teachers' => [Teacher::factory()->create()->id],
                     'utilization_rate' => 65,
                 ]
             ],
@@ -42,7 +42,7 @@ class ResourceSeeder extends Seeder
                 'name' => 'Grammar and Composition Platform',
                 'type' => 'Platform',
                 'resource_management' => [
-                    'allocated_teachers' => [Teacher::factory()],
+                    'allocated_teachers' => [Teacher::factory()->create()->id],
                     'utilization_rate' => 82,
                 ]
             ],

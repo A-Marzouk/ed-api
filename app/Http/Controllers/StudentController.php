@@ -13,7 +13,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        return Student::paginate(25);
     }
 
     /**
@@ -37,7 +37,7 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        //
+        return $student->load('educationClasses:id,subject');
     }
 
     /**

@@ -13,7 +13,7 @@ class EducationClassController extends Controller
      */
     public function index()
     {
-        //
+        return EducationClass::paginate(25);
     }
 
     /**
@@ -37,7 +37,7 @@ class EducationClassController extends Controller
      */
     public function show(EducationClass $educationClass)
     {
-        //
+        return $educationClass->load(['classProgress', 'students']);
     }
 
     /**
