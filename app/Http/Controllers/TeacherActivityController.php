@@ -13,7 +13,8 @@ class TeacherActivityController extends Controller
      */
     public function index()
     {
-        return TeacherActivity::with('teacher:id,name')->paginate(25);
+        return TeacherActivity::with('teacher:id,name')->select('id', 'teacher_id', 'activity_score', 'student_interaction_rating', 'subjects_taught', 'last_active_at')
+            ->paginate(25);
     }
 
     /**

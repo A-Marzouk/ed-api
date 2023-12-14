@@ -25,12 +25,12 @@ class CoachSeeder extends Seeder
                 ],
                 'teacher_interactions' => [
                     [
-                        'teacher_id' => Teacher::factory()->create()->id,
+                        'teacher_id' => Teacher::inRandomOrder()->first()->id,
                         'last_meeting_date' => '2023-11-08',
                         'meeting_notes' => 'Discussed student engagement strategies.'
                     ],
                     [
-                        'teacher_id' =>Teacher::factory()->create()->id,
+                        'teacher_id' => Teacher::inRandomOrder()->first()->id,
                         'last_meeting_date' => '2023-11-07',
                         'meeting_notes' => 'Reviewed upcoming curriculum changes.'
                     ]
@@ -44,12 +44,12 @@ class CoachSeeder extends Seeder
                 ],
                 'teacher_interactions' => [
                     [
-                        'teacher_id' => Teacher::factory()->create()->id,
+                        'teacher_id' => Teacher::inRandomOrder()->first()->id,
                         'last_meeting_date' => '2023-11-10',
                         'meeting_notes' => 'Planned history project outline.'
                     ],
                     [
-                        'teacher_id' => Teacher::factory()->create()->id,
+                        'teacher_id' => Teacher::inRandomOrder()->first()->id,
                         'last_meeting_date' => '2023-11-09',
                         'meeting_notes' => 'Analyzed challenges in student\'s art engagement'
                     ]

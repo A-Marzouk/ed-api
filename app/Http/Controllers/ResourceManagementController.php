@@ -13,7 +13,7 @@ class ResourceManagementController extends Controller
      */
     public function index()
     {
-        //
+        return ResourceManagement::with('resource:id,name')->paginate(25);
     }
 
     /**

@@ -13,7 +13,7 @@ class ClassProgressController extends Controller
      */
     public function index()
     {
-        //
+        return ClassProgress::with('educationClass:id,subject')->paginate(25);
     }
 
     /**
